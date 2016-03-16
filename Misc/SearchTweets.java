@@ -16,7 +16,7 @@ import twitter4j.conf.ConfigurationBuilder;
 public class SearchTweets {
     public static void main(String[] args) throws IOException {
         ConfigurationBuilder cb = new ConfigurationBuilder();
-        //Las llaves y tokens son proporcionadas por el API de Twitter.
+        //Las credenciales están ligadas a una cuenta y son proporcionadas por el API de Twitter.
         cb.setDebugEnabled(true)
           .setOAuthConsumerKey("")
           .setOAuthConsumerSecret("")
@@ -31,6 +31,7 @@ public class SearchTweets {
             String q = "";
             q = sc.nextLine();
             Query query = new Query(q);
+            //Hay un número de queries límite cada 15 minutos.
             QueryResult result;
             do {
                 result = twitter.search(query);
