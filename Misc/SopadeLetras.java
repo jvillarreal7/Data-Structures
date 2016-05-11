@@ -99,6 +99,7 @@ public class SopadeLetras {
                         {
                             System.out.println(">>" + w + " fue encontrada horizontalmente de izquierda a derecha.");
                             found = true;
+                            break;
                         }
                     }
                 }
