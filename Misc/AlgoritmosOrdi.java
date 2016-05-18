@@ -212,6 +212,7 @@ public class AlgoritmosOrdi {
             {
                 int vowelCounter = 0;
                 int consCounter = 0;
+                int letterCounter = 0;
                 lineCounter++;
                 str = str.toLowerCase();
                 for(int i = 0; i < str.length(); i++)
@@ -219,6 +220,7 @@ public class AlgoritmosOrdi {
                     char aux = str.charAt(i);
                     if(Character.isLetter(aux))
                     {
+                        letterCounter++;
                         if(aux == 'a' || aux == 'e' || aux == 'i' || aux == 'o' || aux == 'u')
                         {
                             vowelCounter++;
@@ -229,7 +231,7 @@ public class AlgoritmosOrdi {
                         }
                     }
                 }
-                System.out.println("Se encontraron " + vowelCounter + " vocales y " + consCounter + " consonantes en la línea " + lineCounter + ".");
+                System.out.println("Se encontraron " + letterCounter + " letras, " + vowelCounter + " vocales y " + consCounter + " consonantes en la línea " + lineCounter + ".");
             }
         }
         catch(Exception e)
